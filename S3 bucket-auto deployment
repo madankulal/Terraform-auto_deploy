@@ -1,0 +1,25 @@
+provider "aws" {
+  region = "us-west-2" # Replace with your desired AWS region
+}
+
+resource "aws_s3_bucket" "example_bucket" {
+  bucket = "your-unique-bucket-name"
+  acl    = "private"
+
+  # Uncomment the following if you want to specify a specific region (zone)
+  # region = "us-west-2" 
+
+  # Uncomment the following if you want to enable versioning
+  # versioning {
+  #   enabled = true
+  # }
+
+  # Uncomment the following if you want to enable server-side encryption
+  # server_side_encryption_configuration {
+  #   rule {
+  #     apply_server_side_encryption_by_default {
+  #       sse_algorithm = "AES256"
+  #     }
+  #   }
+  # }
+}
