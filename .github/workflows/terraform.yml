@@ -20,16 +20,13 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       # Azure Login (IMPORTANT)
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: |
-            {
-              "clientId": "${{ secrets.ARM_CLIENT_ID }}",
-              "clientSecret": "${{ secrets.ARM_CLIENT_SECRET }}",
-              "subscriptionId": "${{ secrets.ARM_SUBSCRIPTION_ID }}",
-              "tenantId": "${{ secrets.ARM_TENANT_ID }}"
-            }
+     - name: Azure Login
+  uses: azure/login@v1
+  with:
+    client-id: ${{ secrets.ARM_CLIENT_ID }}
+    tenant-id: ${{ secrets.ARM_TENANT_ID }}
+    subscription-id: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+    client-secret: ${{ secrets.ARM_CLIENT_SECRET }}
 
       # Terraform Init
       - name: Terraform Init
