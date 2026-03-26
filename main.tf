@@ -4,6 +4,6 @@ provider "azurerm" {
 
 # Resource Group
 resource "azurerm_resource_group" "rg" {
-  name     = "madan-resource-group"
+  name     = "madankumar-resource-group"
   location = "East US"
 }
