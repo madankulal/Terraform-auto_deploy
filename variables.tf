@@ -2,10 +2,6 @@ variable "location" {
   default = "East US"
 }
 
-variable "resource_group_name" {
-  default = "aks-rg"
-}
-
 variable "cluster_name" {
   default = "my-aks-cluster"
 }
