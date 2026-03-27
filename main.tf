@@ -2,7 +2,7 @@
 
 # Resource Group
 resource "azurerm_resource_group" "rg" {
-  name     = "madan-resource-group"
+  name     = "demo-resource-group"
   location = "East US"
 }
 
